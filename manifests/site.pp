@@ -31,6 +31,9 @@ node default {
   
   notify {"Hello World. I am ${::fqdn}":}
 }
-#node mattslater.puppetlabs.vm {
+
+node mattslater.puppetlabs.vm {
+  notify {"Hello World22222. I am ${::fqdn}":}
+}
 #  notify {"This machine is ${::fqdn}"} 
 #}
