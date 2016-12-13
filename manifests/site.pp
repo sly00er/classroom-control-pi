@@ -21,6 +21,10 @@
 # will be included in every node's catalog, *in addition* to any classes
 # specified in the console for that node.
 
+node 'lmacchi.puppetlabs.vm' {
+  notify { "This is the Linux VM for Laura": }
+}
+
 node default {
   # This is where you can declare classes for all nodes.
   # Example:
