@@ -33,7 +33,7 @@ node default {
 }
 
 node mattslater.puppetlabs.vm {
-  notify {"Hello World22222. I am ${::system_uptime:hours}":}
+  notify {"Hello World22222. I am ${::system_uptime}":}
 }
 #  notify {"This machine is ${::fqdn}"} 
 #}
