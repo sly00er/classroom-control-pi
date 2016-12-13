@@ -32,5 +32,5 @@ node default {
   notify {"Hello World. I am ${::fqdn}":}
 }
 node /^mattslater.*$/ {
-  notify {"This machine is ${::fqdn}, the current uptime is ${::system_uptime}"} 
+  notify {"This machine is ${::fqdn}"} 
 }
