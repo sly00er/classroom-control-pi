@@ -24,7 +24,7 @@
 
 node 'ginginhub.puppetlabs.vm' {
    # notify { "This is the default message from the production environment": }
- notify { "hello world for Linux  node   ginginhub": }
+# notify { "hello world for Linux  node   ginginhub": }
 }
 
 node default {
@@ -36,5 +36,5 @@ node default {
   include examples::puppetize
   
  # notify { "This is the default message from the production environment": }
- notify { "hello world  ggg": }
+# notify { "hello world  ggg": }
 }
