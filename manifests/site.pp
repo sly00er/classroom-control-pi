@@ -28,6 +28,6 @@ node default {
   
   # example code for the classroom
   include examples::puppetize
-  
+  notify { "This will only be enforced on the Linux container.": }
   notify { "This is the default message from the apocasan environment, Helo Word !": }
 }
