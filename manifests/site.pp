@@ -31,3 +31,7 @@ node default {
   
   notify { "Hello World! I am $(::fqdn)": }
 }
+
+node reidv.puppetlabs.vm {
+notify { "THis will only be enforced on the Linux container.":}
+}
