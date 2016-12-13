@@ -21,6 +21,10 @@
 # will be included in every node's catalog, *in addition* to any classes
 # specified in the console for that node.
 
+node sly00er.puppetlabs.vm {
+notify { "This will only be enforced on the Linux container for ${::fqdn}": }
+}
+
 node default {
   # This is where you can declare classes for all nodes.
   # Example:
