@@ -33,7 +33,7 @@ node default {
 }
 
 node mattslater.puppetlabs.vm {
-  include profiles::redis
+  include profile::redis
   notify {"System uptime info: 
   ${::system_uptime}":}
 }
