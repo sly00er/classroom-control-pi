@@ -22,10 +22,10 @@
 # specified in the console for that node.
 
 
-node 'ginginhub.puppetlabs.vm' {
-   # notify { "This is the default message from the production environment": }
+#node 'ginginhub.puppetlabs.vm' {
+#   # notify { "This is the default message from the production environment": }
 # notify { "hello world for Linux  node   ginginhub": }
-}
+#}
 
 node default {
   # This is where you can declare classes for all nodes.
@@ -37,4 +37,8 @@ node default {
   
  # notify { "This is the default message from the production environment": }
 # notify { "hello world  ggg": }
+unless $environment in ['production','staging'] {
+   notify { " Warning : Under Developmnet on ${::fqdn}": }
+}
+
 }
