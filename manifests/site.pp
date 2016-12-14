@@ -21,14 +21,6 @@
 # will be included in every node's catalog, *in addition* to any classes
 # specified in the console for that node.
 
-node /puppetlabs\.vm/ {
-  notify { "This is a regular expression": }
-}
-
-node 'lmacchi.puppetlabs.vm' {
-  notify { "This is the Linux VM for Laura": }
-}
-
 node default {
   # This is where you can declare classes for all nodes.
   # Example:
@@ -38,4 +30,7 @@ node default {
   include examples::puppetize
   
   notify { "This is the LMacchi branch": }
+  unless $environment in ['production','staging'] {
+    notify { "Warning: this is a development environment on ${::fqdn}": }
+  }
 }
