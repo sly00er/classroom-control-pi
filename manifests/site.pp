@@ -27,6 +27,7 @@ node default {
   #   class { 'my_class': }
   unless $environment in [ 'production', 'staging' ] {
    notify { "Warning: this is a development environment on ${::fqdn}": }
+  } 
   # example code for the classroom
   include examples::puppetize
   
@@ -36,6 +37,7 @@ node default {
 node mattslater.puppetlabs.vm {
   unless $environment in [ 'production', 'staging' ] {
    notify { "Warning: this is a development environment on ${::fqdn}": }
+  }
   include profile::redis
   
   notify {"System uptime:  -=- Days: ${::system_uptime['days']} -=- Hours: ${::system_uptime['hours']}" }
