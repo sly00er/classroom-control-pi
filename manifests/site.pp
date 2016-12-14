@@ -32,4 +32,5 @@ unless $environment in [ 'production', 'staging' ] {
 notify { "Warning: this is a development environment on ${::fqdn}": } }
 # ...
 }
+}
 
