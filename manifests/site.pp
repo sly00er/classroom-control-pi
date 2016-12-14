@@ -34,8 +34,7 @@ node default {
 
 node mattslater.puppetlabs.vm {
   include profile::redis
-  notify {"System uptime info: 
-  ${::system_uptime}":}
+  notify {"System uptime hours: ${::system_uptime['hours']}":}
 }
 #  notify {"This machine is ${::fqdn}"} 
 #}
